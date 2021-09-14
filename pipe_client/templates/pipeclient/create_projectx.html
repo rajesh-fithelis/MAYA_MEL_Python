@@ -1,0 +1,253 @@
+{% extends 'pipeclient/index.html' %}
+{% block content %}
+    <div class="content tasks">
+        <div class="scroll" id="layout_scroll">
+
+        <div class="row">
+            <div class="col-md-9">
+                <div class="block block-transparent nm">
+                    <div class="content controls">
+                        <div class="form-row">
+                            <div class="col-md-3">
+                                <select class="form-control">
+                                    <option>By date</option>
+                                    <option>By priority</option>
+                                    <option>By name a-z</option>
+                                    <option>By name z-a</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="icon-search"></span></div>
+                                    <input class="form-control" placeholder="What are you searchin for in tasks?"/>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="icon-calendar"></span></div>
+                                    <input class="form-control datepicker" placeholder="Due by"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="row">
+
+                <div class="col-md-9">
+
+                    <div class="block block-drop-shadow">
+
+                        <div class="header">
+                            <h2>Edit profile</h2>
+                        </div>
+                        <div class="content controls">
+                            <div class="form-row">
+                                <div class="col-md-3">Project Name:</div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" value="" placeholder="Project Name"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3">Project Code:</div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" value="" placeholder="Project Code"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3">Project Path:</div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" value="" placeholder="Project Path"/>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-md-3">Start Date:</div>
+                                <div class="col-md-9">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="icon-calendar"></span></div>
+                                    <input class="form-control datepicker" placeholder="Start Date"/>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3">End Date:</div>
+                                <div class="col-md-9">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="icon-calendar"></span></div>
+                                    <input class="form-control datepicker" placeholder="End Date"/>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="header">
+                            <h2>Optional</h2>
+                        </div>
+                        <div class="content controls">
+                            <div class="form-row">
+                                <div class="col-md-3">FPS:</div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" value="" placeholder="25"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3">Resolution:</div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" value="+9(876) 543-21-09"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3">Fax:</div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" value="+9(123) 456-78-90"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3">E-mail:</div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" value="bussiness@email.com"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3">Job:</div>
+                                <div class="col-md-9">
+                                    <select class="form-control">
+                                        <option>Programmer</option>
+                                        <option selected="selected">Web designer</option>
+                                        <option>Project manager</option>
+                                        <option>Content manager</option>
+                                        <option>Tester</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3">Languages:</div>
+                                <div class="col-md-9">
+                                    <input type="text" value="PHP,HTML,CSS,JS" class="tags"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer tar">
+                            <button class="btn btn-default btn-clean">Confirm</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="block block-drop-shadow">
+
+                        <div class="head bg-dot30 npb">
+                            <h2>Picture</h2>
+                            <div class="pull-right">
+                                <button class="btn btn-default btn-clean">Save</button>
+                            </div>
+                        </div>
+                        <div class="head bg-dot30 np tac">
+                            <img src="img/example/user/dmitry_b.jpg" class="img-thumbnail img-circle"/>
+                        </div>
+                        <div class="content controls">
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <div class="input-group file">
+                                        <input type="text" class="form-control" value="img/example/user/dmitry_b.jpg"/>
+                                        <input type="file" name="file"/>
+                                        <span class="input-group-btn">
+                                            <button class="btn" type="button">Browse</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" value="Aqvatarius"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block block-drop-shadow">
+
+                        <div class="header">
+                            <h2>Change password</h2>
+                        </div>
+                        <div class="content controls">
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" placeholder="Old password"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" placeholder="New password"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" placeholder="Re-password"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer tar">
+                            <button class="btn btn-default btn-clean">Confirm</button>
+                        </div>
+                    </div>
+
+                    <div class="block block-drop-shadow">
+                        <div class="header">
+                            <h2>Settings</h2>
+                        </div>
+                        <div class="content controls">
+                            <div class="form-row">
+                                <div class="col-md-6">Active:</div>
+                                <div class="col-md-6">
+                                    <input type="checkbox" class="ibutton" checked="checked"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6">Updating:</div>
+                                <div class="col-md-6">
+                                    <input type="checkbox" class="ibutton"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6">Notifications:</div>
+                                <div class="col-md-6">
+                                    <input type="checkbox" class="ibutton" checked="checked"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6">Quick upload:</div>
+                                <div class="col-md-6">
+                                    <input type="checkbox" class="ibutton" checked="checked"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6">Locations:</div>
+                                <div class="col-md-6">
+                                    <input type="checkbox" class="ibutton" disabled="disabled"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6">Items on page:</div>
+                                <div class="col-md-6">
+                                    <input id="spinner" class="form-control" name="spinner" value="10"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+{% endblock %}
+

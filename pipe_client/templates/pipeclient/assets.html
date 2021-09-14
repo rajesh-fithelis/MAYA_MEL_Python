@@ -1,0 +1,61 @@
+{% extends 'pipeclient/index.html' %}
+{% block content %}
+
+    <div class="block block-transparent">
+        <div class="content tasks">
+            <div class="scroll" id="layout_scroll">
+                <div class="block">
+                    <div class="header">
+                        <h2>ASSETS DETAIL</h2>
+                    </div>
+                    <div class="content">
+
+                        <table id="assetlist" cellpadding="0" cellspacing="0" width="100%" class="table table-bordered table-striped sortable">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" class="checkall"/></th>
+                                    <th width="10%">Name</th>
+                                    <th width="10%">Asset Type</th>
+                                    <th width="10%">Start Date</th>
+                                    <th width="10%">End Date</th>
+                                    <th width="10%">Created</th>
+                                    <th width="10%">Added By</th>
+                                    <th width="33%">Description</th>
+                                    <th width="7%">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% if not assets %}
+                                <tr>
+                                    <td><input type="checkbox" name="checkbox"/></td>
+                                    <td colspan="9"><h4>This table contain no data</h4></td>
+                                </tr>
+                            {% else %}
+                                {% for asset in assets %}
+                                    <tr>
+                                        <td><input type="checkbox" name="checkbox"/></td>
+                                        <td class="asset" ><span id="{{ asset.aid }}"> <a href="tasks?aid={{ asset.aid }}">{{ asset.name }}</a></span></td>
+                                        <td>{{ asset.asset_type }}</td>
+                                        <td>{{ asset.start_date }}</td>
+                                        <td>{{ asset.end_date }}</td>
+                                        <td>{{ asset.created }}</td>
+                                        <td>{{ asset.added_by }}</td>
+                                        <td>{{ asset.description }}</td>
+                                        <td>
+                                            <a href="#" class="widget-icon"><span class="icon-pencil"></span></a>
+						                    <a href="#" class="widget-icon widget-icon-dark"><span class="icon-trash"></span></a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            {% endif %}
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

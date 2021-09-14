@@ -1,0 +1,77 @@
+{% extends 'pipeclient/index.html' %}
+{% block content %}
+    <div class="content controls tasks">
+            <div class="container">
+                <div class="form-row row-centered">
+                    <div class="col-md-4 col-centered">
+
+                        <a href="#projects_create_modal" data-toggle="modal" class="btnx">
+                          <span>CREATE PROJECT</span>
+                        </a>
+
+                    </div>
+
+                    <div class="col-md-4 col-centered">
+
+<!--                        <a href="#pc_asset_create_modal" data-toggle="modal" class="btnx">-->
+                        <a href="#assets_create_modal" data-toggle="modal" class="btnx">
+                          <span>CREATE ASSET</span>
+                        </a>
+
+                    </div>
+
+                    <div class="col-md-4 col-centered">
+
+                        <a href="#sequences_create_modal" data-toggle="modal" class="btnx">
+                          <span>CREATE SEQUENCE</span>
+                        </a>
+
+                    </div>
+
+                    <div class="col-md-4 col-centered">
+
+                        <a href="#shots_create_modal" data-toggle="modal" class="btnx">
+                          <span>CREATE SHOT</span>
+                        </a>
+
+                    </div>
+
+                    <div class="col-md-4 col-centered">
+
+                        <a href="#tasks_create_modal" data-toggle="modal" class="btnx">
+                          <span>CREATE TASK</span>
+                        </a>
+
+                    </div>
+
+                    <!--<div class="col-md-4 col-centered">-->
+                        <!--<a href="#spk_project_ce_modal" data-toggle="modal" class="btnx">-->
+                            <!--<span>TEST TASK</span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-12">
+                    </div>
+                </div>
+                <!--{% if status_code == 201  %}-->
+
+                <!--{% endif %}-->
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div style="border: 0px solid red; height: 10.25em; line-height: 9;"></div>
+        </div>
+    </div>
+
+{% endblock %}
+
+<!--<script>-->
+<!--$("#DogForm").on('submit', function(event) {-->
+      <!--alert("New Dog Added");-->
+<!--</script>    -->

@@ -1,0 +1,316 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flow Pipeline</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="icon" type="image/ico" href="/static/logo.png"/>
+
+    <link href="/static/css/stylesheets.css" rel="stylesheet" type="text/css" />
+
+    <script type='text/javascript' src="/static/js/plugins/jquery/jquery.min.js"></script>
+    <script type='text/javascript' src="/static/js/plugins/jquery/jquery-ui.min.js"></script>
+    <script type='text/javascript' src="/static/js/plugins/jquery/jquery-migrate.min.js"></script>
+    <script type='text/javascript' src="/static/js/plugins/jquery/globalize.js"></script>
+    <script type='text/javascript' src="/static/js/plugins/bootstrap/bootstrap.min.js"></script>
+
+    <script type='text/javascript' src="/static/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script type='text/javascript' src="/static/js/plugins/uniform/jquery.uniform.min.js"></script>
+
+    <script type='text/javascript' src="/static/js/plugins/knob/jquery.knob.js"></script>
+    <script type='text/javascript' src="/static/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script type='text/javascript' src="/static/js/plugins/flot/jquery.flot.js"></script>
+    <script type='text/javascript' src="/static/js/plugins/flot/jquery.flot.resize.js"></script>
+
+    <script type='text/javascript' src='/static/js/plugins/noty/jquery.noty.js'></script>
+    <script type='text/javascript' src='/static/js/plugins/noty/layouts/topCenter.js'></script>
+    <script type='text/javascript' src='/static/js/plugins/noty/layouts/topLeft.js'></script>
+    <script type='text/javascript' src='/static/js/plugins/noty/layouts/topRight.js'></script>
+    <script type='text/javascript' src='/static/js/plugins/noty/themes/default.js'></script>
+
+    <script type='text/javascript' src='/static/js/plugins/tagsinput/jquery.tagsinput.min.js'></script>
+    <script type='text/javascript' src='/static/js/plugins/ibutton/jquery.ibutton.js'></script>
+    <script type='text/javascript' src='/static/js/plugins/datatables/jquery.dataTables.min.js'></script>
+
+    <script type='text/javascript' src="/static/js/plugins.js"></script>
+    <script type='text/javascript' src="/static/js/actions.js"></script>
+    <script type='text/javascript' src="/static/js/charts.js"></script>
+    <script type='text/javascript' src="/static/js/settings.js"></script>
+    <script type='text/javascript' src="/static/js/custom.js"></script>
+
+	<style>
+
+  .grid .row {
+    background-color: transparent;
+    border: 0;
+    height: 50px;
+    padding-right: 0;
+
+  }
+  .grid .row .col-md-3
+    {
+        min-height: 150px;
+    }
+  .grid .row .col-md-6
+    {
+        min-height: 300px;
+    }
+
+	</style>
+
+</head>
+<body class="bg-img-num3">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                 <nav class="navbar brb" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-reorder"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="{% static 'img/logo.png' %}"/> Sparky Flow</a>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href="index.html">
+                                    <span class="icon-home"></span> dashboard
+                                </a>
+                                 <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-pencil"></span> forms</a></li>
+                                <li> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-cogs"></span> components</a></li>
+                            <li><a href="widgets.html"><span class="icon-globe"></span> widgets</a></li>
+                        </ul>
+                        <form class="navbar-form navbar-right" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="search..."/>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+
+        <!-- Breadcump div start -->
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li class="active">{{ request.path }}</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Breadcump div end -->
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="block block-drop-shadow">
+                    <div class="user bg-default bg-light-rtl">
+                        <div class="info">
+                            <a href="#" class="informer informer-three">
+                                <span>14 / 255</span>
+                                Tasks
+                            </a>
+                            <a href="#" class="informer informer-four">
+                                <span>Animation</span>
+                                Department
+                            </a>
+                            <img src="{% static 'img/example/user/dmitry_b.jpg' %}" class="img-circle img-thumbnail"/>
+                            <p align="center">Username</p>
+                        </div>
+                    </div>
+
+                    <ul class="content list-group">
+                        <li><a href="projects" class="list-group-item">Projects</a></li>
+                        <li class="dropdown">
+                            <!--<a href="create_entity" class="list-group-item dropdown-toggle" data-toggle="dropdown">Create Entity<i class="icon-angle-right pull-right"></i></a>-->
+                            <a href="create_entity" class="list-group-item">Create Entity</a>
+
+                        </li>
+                        <li><a href="#" class="list-group-item">Assignments</a></li>
+                        <li><a href="#" class="list-group-item">User Profile</a></li>
+                        <li><a href="#" class="list-group-item">Guides</a></li>
+                    </ul>
+                </div>
+
+                <div class="block block-transparent">
+                    <div class="header">
+                        <h2>Projects</h2>
+                    </div>
+                    <div class="content list list-default">
+                        <div class="list-item">
+                            <div class="list-text">
+                                <p>Duis blandit leo</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-text">
+                                <p>Sed dictum dolor</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-text">
+                                <p>Duis blandit leo</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-text">
+                                <p>Sed dictum dolor</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-text">
+                                <p>Duis blandit leo</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-text">
+                                <p>Sed dictum dolor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-10">
+{% for message in messages %}
+  <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ message }}
+  </div>
+{% endfor %}
+                {% block content %}
+
+
+                {% endblock %}
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div style="border: 0px solid red; height: 10.25em; line-height: 10.25;"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="page-footer">
+                <div class="page-footer-wrap">
+                    <div class="side pull-left">
+                        Copyirght &COPY; Sparky Flow 2019. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Project Update Form Modal: Start-->
+    <div class="modal" id="pc_project_up_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="editformdet" method="POST" action="update_project" class="post-form">{% csrf_token %}
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Update Project</h4>
+                        </div>
+                        <div class="modal-body clearfix">
+
+                            <div class="controls">
+
+                                    {{ form.as_p }}
+
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default btn-clean" data-dismiss="modal">Close</button>
+                            <button id="pc_prj_save_btn" type="submit" class="save btn btn-default btn-success btn-clean">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+    <!-- Project Update Form Modal: End-->
+
+    <!-- Project List Form Modal: Start-->
+    <div class="modal" id="pc_project_delete_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="deleteprojectform" method="POST" action="projects" class="post-form">{% csrf_token %}
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Delete Project</h4>
+                        </div>
+                        <div class="modal-body clearfix">
+
+                            <div class="controls">
+                                    <h4 class="modal-title">Are you sure you want to delete this project?</h4>
+                                    <input type="hidden" id="name" name="name" value="">
+                                    <input type="hidden" id="code" name="code" value="">
+                                    <input type="hidden" id="url" name="url" value="">
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default btn-clean" data-dismiss="modal">Close</button>
+                            <button id="pc_prj_delete_btn" type="button" class="save btn btn-default btn-danger btn-clean">Delete</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+    <!-- Project List Form Modal: End-->
+
+        <!-- Asset Create Form Modal: Start -->
+    {% for form, value in forms.items %}
+    <div class="modal" id= "{{ form }}_create_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="{{ form }}" method="POST" action="{{ form }}" class="post-form">{% csrf_token %}
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Create {{ form }}</h4>
+                        </div>
+                        <div class="modal-body clearfix">
+
+                            <div class="controls">
+
+                                    {{ value.as_p }}
+
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default btn-clean" data-dismiss="modal">Close</button>
+                            <!--<button type="button" class="submit-btn btn-success btn-clean">Submit form</button>-->
+                            <button id="asset_save_btn" type="submit" class="save btn btn-default btn-success btn-clean">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+    {% endfor %}
+    <!-- Asset Create Form Model: End-->
+
+<script>
+$(function() {
+    $( ".datepicker" ).datepicker({
+          changeMonth: true,
+          changeYear: true,
+          yearRange: "2010:2050",
+          format: 'yyyy-mm-dd',
+          // You can put more options here.
+    });
+});
+</script>
+</body>
+</html>

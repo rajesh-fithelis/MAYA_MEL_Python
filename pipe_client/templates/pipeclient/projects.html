@@ -1,0 +1,48 @@
+{% extends 'pipeclient/index.html' %}
+{% block content %}
+
+    <div class="block block-transparent">
+        <div class="content tasks">
+            <div class="scroll" id="layout_scroll">
+            {% for project in projects %}
+                        <div class="task-item">
+                            <div id="div_{{ project.pid }}" class="task-item-content">
+                            <div class="header" style="">
+                                <!--<h2>Invoice</h2>-->
+                                <div class="pull-right">
+                                    <ul class="buttons">
+                                        <li><a href="#pc_project_up_modal" data-toggle="modal"><span id="prjId_{{ project.pid }}" class="spk_project_edit icon-pencil"></span></a></li>
+                                        <li><a href="#pc_project_delete_modal" data-toggle="modal"><span id="delPrjId_{{ project.pid }}" class="spk_project_delete icon-remove"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div id="bodydiv_{{ project.pid }}" class="projectBox" style="background: transparent; padding-top: 41px; height: 100%;">
+                                <div class="task-item-head"><h5 align="center">{{ project.name }}</h5></div>
+                                <div class="task-item-subhead"><b>Code: </b>{{ project.code }}</div>
+                                <div class="task-item-subhead"><b>Type: </b>{{ project.project_type }}</div>
+                                <div class="task-item-subhead"><b>Start Date: </b>{{ project.start_date }}</div>
+                                <div class="task-item-subhead"><b>End Date: </b> {{ project.end_date }}</div>
+                                <div class="task-item-subhead"><b>Project Path: </b> {{ project.project_path }}</div>
+                                <div class="task-item-subhead"><b>Status: </b> {{ project.active }}</div>
+                                <div class="task-item-date"><b>FPS: </b> {{ project.fps }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-desktop"></i> {{ project.resolution }}</div>
+                            </div>
+                                <input type="hidden" id="url_{{ project.pid }}" name="url_{{ project.pid }}" value="{{ project.url }}">
+                                <input type="hidden" id="pid_{{ project.pid }}" name="pid_{{ project.pid }}" value="{{ project.id }}">
+                                <input type="hidden" id="name_{{ project.pid }}" name="name_{{ project.pid }}" value="{{ project.name }}">
+                                <input type="hidden" id="code_{{ project.pid }}" name="code_{{ project.pid }}" value="{{ project.code }}">
+                                <input type="hidden" id="ptype_{{ project.pid }}" name="ptype_{{ project.pid }}" value="{{ project.project_type }}">
+                                <input type="hidden" id="start_date_{{ project.pid }}" name="start_date_{{ project.pid }}" value="{{ project.start_date }}">
+                                <input type="hidden" id="end_date_{{ project.pid }}" name="end_date_{{ project.pid }}" value="{{ project.end_date }}">
+                                <input type="hidden" id="prj_path_{{ project.pid }}" name="prj_path_{{ project.pid }}" value="{{ project.project_path }}">
+                                <input type="hidden" id="active_{{ project.pid }}" name="active_{{ project.pid }}" value="{{ project.active }}">
+                                <input type="hidden" id="fps_{{ project.pid }}" name="fps_{{ project.pid }}" value="{{ project.fps }}">
+                                <input type="hidden" id="resolution_{{ project.pid }}" name="resolution_{{ project.pid }}" value="{{ project.resolution }}">
+                            </div>
+                        </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
