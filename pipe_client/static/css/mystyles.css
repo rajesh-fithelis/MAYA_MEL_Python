@@ -1,0 +1,158 @@
+    /*#layout_scroll:hover > div:hover {
+        opacity: 0.5;
+    }*/
+    /*.content:hover .task-item-content-entity{
+      zoom: 1;
+      filter: alpha(opacity=45);
+      opacity: 0.45;
+    }*/
+    /*Project box hover highlight*/
+    .task-item:hover .task-item-content{
+      zoom: 1;/*increase value will zoom*/
+      background: rgba(0,0,0,0.09);
+    }
+    
+    .tasks .task-item .task-item-content-entity{float: left; width: 300px; height: 300px; background: rgba(0,0,0,0.2); margin-bottom: 10px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%;}
+    .tasks .task-item .task-item-content-entity .task-item-head{float: left; width: 100%; line-height: 30px; font-size: 13px; padding: 5px 10px 0px; font-weight: bold;}
+    /*.tasks .task-item .task-item-content-entity .task-item-subhead{float: left; width: 100%; padding: 0px 15px; font-size: 11px; margin-bottom: 20px;}*/
+    .tasks .task-item .task-item-content-entity .task-item-subhead{float: left; width: 100%; padding: 0px 15px; font-size: 11px; margin-bottom: 15px;}
+    .tasks .task-item .task-item-content-entity .task-item-date{float: left; width: 100%; padding: 10px; font-size: 11px; line-height: 20px; background: rgba(0,0,0,0.1);}
+    .tasks .task-item .task-item-content-entity .task-item-date [class^='icon-']{font-size: 14px;}
+    .tasks .task-item.priority-high .task-item-content-entity .task-item-date{background: rgba(204,0,0,0.2);}
+    .tasks .task-item.priority-mid .task-item-content-entity .task-item-date{background: rgba(255,153,0,0.2);}
+    .tasks .task-item.priority-low .task-item-content-entity .task-item-date{background: rgba(102,153,0,0.2);}   
+    .tasks.tasks_list .task-item .task-item-content-entity{margin-bottom: 0px;}
+    .task-item-content-entity-center {  text-align: center; vertical-align: middle;   display: flex; align-items: center;  justify-content: center; }
+
+
+    .box {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.2);
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+      margin-bottom: 20px;
+    }
+
+    /* create entity page style*/
+    /* centered columns styles */
+    .row-centered {
+        text-align:center;
+    }
+    .row-centered-pspace {
+        float: none;
+        text-align:center;
+        margin: auto;
+        width: 50%;
+    }
+    .col-centered {
+        /*background: rgba(0,0,0,0.2);*/
+        display:inline-block;
+        float:none;
+        /* reset the text-align */
+        text-align:left;
+        /* inline-block space fix */
+        margin-right:-4px;
+        text-align: center;
+        /*background-color: #ccc;*/
+        /*border: 1px solid #ddd;*/
+        margin-bottom: 80px;
+    }
+
+    .hit-the-floor {
+        color: #fff;
+        font-size: 2em;
+        font-weight: bold;
+        font-family: 'Raleway',sans-serif;
+        /*text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);*/
+        }
+
+    .hit-the-floor {
+      text-align: center;
+    }
+
+    .col-centered:hover .box{
+      zoom: 1;/*increase value will zoom*/
+      background: rgba(0,0,0,0.09);
+      border: 1px solid rgba(255,255,255,0.09);
+    }
+
+/*round button code - START*/
+    .btnx {
+        background-image: linear-gradient(to right, #2570AD 50%, #133959 100%);
+        border-radius: 50%;
+        box-sizing: border-box;
+        /*color: #00a84f;00a84f*/
+        display: block;
+        /*font: 1.125rem 'Oswald', Arial, sans-serif; /*18*/*/
+        color: #000000;
+        font-size: 1.8em;
+        font-weight: bold;
+        font-family: 'Raleway',sans-serif;
+
+        height: 300px;
+        letter-spacing: 1px;
+        margin: 0 auto;
+        padding: 4px;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 300px;
+        z-index: 2;
+    }
+
+    .btnx:hover {
+        color: #fff;
+    }
+
+    .btnx span {
+        align-items: center;
+        background: #133959;/*E617B*/
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        height: 300px;
+        transition: background .5s ease;
+        width: 300px;
+        xbackground: url('../img/background/bt_cubs.png') left top repeat #133959;
+    }
+
+    .btnx:hover span {
+        background: transparent;
+    }
+
+    .datepicker{
+        position: relative;
+        z-index: 100000 !important;
+    }
+    .ui-datepicker{z-index: 100000 !important};
+
+
+
+
+
+
+
+    /*edit_datepicker*/
+/*round button code - END*/
+
+    @media only screen and (max-width: 1110px) {
+
+    }
+
+    @media only screen and (max-width: 860px) {
+
+    }
+
+    @media only screen and (max-width: 660px) {
+
+    }
+
+    @media only screen and (max-width: 550px) {
+
+    }
